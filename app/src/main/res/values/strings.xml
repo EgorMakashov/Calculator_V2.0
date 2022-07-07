@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="egor">Егор лох</string>
+    <string name="vadim">Вадим лох</string>
+    <string name="natasha">Наташа молодец</string>
 </resources>

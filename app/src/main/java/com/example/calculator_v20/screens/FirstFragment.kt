@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.calculator_v20.MAIN
 import com.example.calculator_v20.R
 import com.example.calculator_v20.databinding.FragmentFirstBinding
@@ -35,6 +36,8 @@ class FirstFragment : Fragment() {
 
         }
 
-
+        binding.btnList.setOnClickListener {
+            findNavController().navigate(R.id.toListFragment)
+        }
     }
 }
