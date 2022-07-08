@@ -3,7 +3,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="egor">Егор лох</string>
-    <string name="vadim">Вадим лох</string>
-    <string name="natasha">Наташа молодец</string>
+    <string name="time1">11:27</string>
+    <string name="time2">00:00</string>
+    <string name="time3">23:55</string>
+
+    <string name="cat1">Красивый котик</string>
+    <string name="cat2">Пушистый котик</string>
+    <string name="cat3">Большой шлёпа</string>
+
+    <string name="description1">кот вот прям ну хороший</string>
+    <string name="description2">Подстригся бы блять</string>
+    <string name="description3">Он родился в питомнике 21 декабря 2017 года</string>
 </resources>

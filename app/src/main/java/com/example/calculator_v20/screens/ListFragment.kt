@@ -44,9 +44,6 @@ class ListFragment: Fragment() {
                 items = getItemsList()
             }
 
-            btnClose.setOnClickListener {
-                navigateUp()
-            }
         }
     }
 

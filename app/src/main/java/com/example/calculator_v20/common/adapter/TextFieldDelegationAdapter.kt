@@ -1,5 +1,7 @@
 package com.example.calculator_v20.common.adapter
 
+import android.provider.ContactsContract
+import android.util.EventLogTags
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.calculator_v20.R
@@ -53,9 +55,12 @@ class TextFieldDelegationAdapter(
         //просто присваиваем полям значения
         fun bind(item: TextFieldModel){
             binding.apply {
-                tvNumItem.text = item.position.toString()
+                tvDescription.text = item.position.toString()
                 //Ниже виден пример вызова лямбда функции
-                tvInfoItem.text = getString.invoke(item.stringId)
+                tvSource.text = getString.invoke(item.DescriptionId)
+                tvPublishedAt.text = getString.invoke(item.TimeId)
+                tvTitle.text = getString.invoke(item.TitleId)
+                ivArticleImage.setImageResource(item.ImageId)
             }
         }
     }
@@ -67,11 +72,35 @@ class TextFieldDelegationAdapter(
 class TextFieldModel(
     val position:Int
 ){
-    val stringId: Int
+    val TitleId: Int
     get() = when(position % 3){
-        0 -> R.string.egor
-        1 -> R.string.vadim
-        2 -> R.string.natasha
-        else -> R.string.egor
+        0 -> R.string.cat1
+        1 -> R.string.cat2
+        2 -> R.string.cat3
+        else -> R.string.cat3
     }
+
+    val TimeId: Int
+        get() = when(position % 3){
+            0 -> R.string.time1
+            1 -> R.string.time2
+            2 -> R.string.time3
+            else -> R.string.time1
+        }
+
+    val DescriptionId: Int
+        get() = when(position % 3){
+            0 -> R.string.description1
+            1 -> R.string.description2
+            2 -> R.string.description3
+            else -> R.string.description2
+        }
+
+    val ImageId: Int
+        get() = when(position % 3){
+            0 -> R.drawable.cat1
+            1 -> R.drawable.cat
+            2 -> R.drawable.cat2
+            else -> R.drawable.cat2
+        }
 }

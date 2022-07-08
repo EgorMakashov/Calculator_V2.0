@@ -31,12 +31,8 @@ class FirstFragment : Fragment() {
         binding.btnNext.setOnClickListener {
             MAIN.navController.navigate(R.id.action_firstFragment_to_secondFragment)
         }
+
         binding.btnNews.setOnClickListener {
-            MAIN.navController.navigate(R.id.action_firstFragment_to_thirdFragment)
-
-        }
-
-        binding.btnList.setOnClickListener {
             findNavController().navigate(R.id.toListFragment)
         }
     }
